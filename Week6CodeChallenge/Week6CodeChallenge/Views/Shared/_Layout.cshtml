@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            
+             
+                    <div class="navbar-header">
+                        <a class="navbar-brand ajax-get" href="@Url.Action("Index","Home")" >
+                            <img alt="Brand" src="http://cdn-img.easylogo.cn/gif/51/51700.gif" width="35">
+                        </a>
+                    </div>
+               
+            
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Index","Home")" class="ajax-get">Home</a></li>
+                    <li><a href="@Url.Action("About","Home")" class="ajax-get">About</a></li>
+                    <li><a href="@Url.Action("Work","Home")" class="ajax-get">Work</a></li>
+                    <li><a href="@Url.Action("Careers","Home")" class="ajax-get">Careers</a></li>
+                    <li><a href="@Url.Action("Contact","Home")" class="ajax-get">Contact</a></li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content" id="ajax-content">
+        @RenderBody()
+    </div>
+
+        <footer id="footer" class="top-space">
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        &copy; @DateTime.Now.Year - Fake Studio
+                    </div>
+                    <div class="col-md-10">
+                        <p class="simplenav">
+                            <a href="@Url.Action("Index","Home")" class="ajax-get">Home</a> |
+                            <a href="@Url.Action("About","Home")" class="ajax-get">About</a> |
+                            <a href="@Url.Action("Work","Home")" class="ajax-get">Work</a> |
+                            <a href="@Url.Action("Careers","Home")" class="ajax-get">Careers</a> |
+                            <a href="@Url.Action("Contact","Home")" class="ajax-get">Contat</a> 
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+           
+               
+
+        </footer>
+    
+
+  
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

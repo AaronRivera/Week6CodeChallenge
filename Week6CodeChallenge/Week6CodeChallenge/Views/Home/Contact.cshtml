@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+
+<div class="container">
+    <h2>Contact Us</h2>
+    <form action="@Url.Action("Contact","Home")" method="post" class="ajax-post">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="name" id="name" name="name" required>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="last name" id="lastName" name="lastName" required>
+            </div>
+
+           
+           
+         </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="email" id="email" name="email" required>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="phone" id="phone" name="phone" required>
+            </div>
+
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+            <input type="text" class="form-control" placeholder="company" id="company" name="company" required>
+            <input type="text" class="form-control" placeholder="project" id="project" name="project" required>
+            <textarea rows="6" class="form-control" placeholder="comment" id="message" name="message" required> </textarea>
+                <input class="btn btn-action" type="submit" value="Send message">
+                </div>
+        </div>
+
+
+       
+
+    </form>
+
+
+</div>
